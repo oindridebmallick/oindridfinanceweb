@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Empowerment - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/img1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.8); /* Light background for readability */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .btn {
+            background: #0A284B; /* Prussian blue */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #1C4E80; /* Light blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Financial Empowerment</h1>
+        <button onclick="loginWithGoogle()" class="btn">Login with Google</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

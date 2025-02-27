@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Hub | Financial Empowerment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('images/img12.jpg'); /* Setting the background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white; /* Ensures text remains readable */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+        main {
+            background: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent overlay for readability */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Job & Skill Development Hub</h1>
+        <button onclick="navigateTo('dashboard.html')">⬅ Back to Dashboard</button>
+    </header>
+
+    <main>
+        <section id="job-listings">
+            <h2>Job Opportunities</h2>
+            <p>Find job opportunities that match your skills and interests.</p>
+            <ul>
+                <li><a href="https://www.naukri.com/" target="_blank"> Full-Time Jobs (Naukri)</a></li>
+                <li><a href="https://www.freelancer.in/" target="_blank"> Freelance & Gigs (Freelancer)</a></li>
+                <li><a href="https://internshala.com/" target="_blank"> Internships (Internshala)</a></li>
+            </ul>
+        </section>
+
+        <section id="resume-upload">
+            <h2> Upload Your Resume</h2>
+            <p>Upload your resume to get matched with jobs.</p>
+            <input type="file" id="resumeInput">
+            <button onclick="uploadResume()">Upload Resume</button>
+        </section>
+
+        <section id="skills">
+            <h2>Free Skill-Building Courses</h2>
+            <p>Upgrade your skills with these free resources:</p>
+            <ul>
+                <li><a href="https://www.coursera.org/" target="_blank"> Coursera</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="https://www.linkedin.com/learning/" target="_blank">LinkedIn Learning</a></li>
+            </ul>
+        </section>
+
+        <section id="community">
+            <h2>Community & Mentorship</h2>
+            <p>Join discussions, ask questions, and get career guidance.</p>
+            <textarea id="communityPost" placeholder="Share your job search experience or ask for advice..."></textarea>
+            <button onclick="postToCommunity()">Post</button>
+            <div id="communityPosts"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

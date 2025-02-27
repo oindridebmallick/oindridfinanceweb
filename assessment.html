@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Assessment | Financial Empowerment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('images/img15.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📊 Financial Assessment</h1>
+        <button onclick="navigateTo('dashboard.html')">⬅ Back to Dashboard</button>
+    </header>
+
+    <main>
+        <section id="quiz-section">
+            <h2>💡 Take the Financial Literacy Quiz</h2>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What percentage of your income should ideally go into savings?</p>
+                    <label><input type="radio" name="q1" value="A"> A. 5%</label>
+                    <label><input type="radio" name="q1" value="B"> B. 20%</label>
+                    <label><input type="radio" name="q1" value="C"> C. 50%</label>
+                </div>
+
+                <div class="question">
+                    <p>2. What is the best way to build credit?</p>
+                    <label><input type="radio" name="q2" value="A"> A. Avoid using credit cards</label>
+                    <label><input type="radio" name="q2" value="B"> B. Pay credit card bills on time</label>
+                    <label><input type="radio" name="q2" value="C"> C. Keep using cash only</label>
+                </div>
+
+                <div class="question">
+                    <p>3. What should you do before taking a loan?</p>
+                    <label><input type="radio" name="q3" value="A"> A. Compare interest rates</label>
+                    <label><input type="radio" name="q3" value="B"> B. Take the maximum amount available</label>
+                    <label><input type="radio" name="q3" value="C"> C. Not worry about interest rates</label>
+                </div>
+
+                <button type="button" onclick="calculateScore()">Submit</button>
+            </form>
+        </section>
+
+        <section id="result-section" style="display: none;">
+            <h2>Your Financial Health Report</h2>
+            <p id="scoreResult"></p>
+            <p id="advice"></p>
+            <a href="courses.html">📚 Improve your skills with financial courses</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

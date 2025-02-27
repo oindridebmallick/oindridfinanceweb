@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background: url('images/img2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .content {
+            background: rgba(255, 255, 255, 0.85); /* Light overlay for readability */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 50%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        #chat-window {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: rgb(29, 137, 220);
+            border-radius: 5px;
+        }
+        #chat-input {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #0c0c0c;
+        }
+        #send-btn {
+            background: #0A284B; /* Prussian blue */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #send-btn:hover {
+            background: #1C4E80; /* Light blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button onclick="navigateTo('dashboard.html')">Back to Dashboard</button>
+    </div>
+
+    <div class="content">
+        <h2>Chatbot</h2>
+        <div id="chat-window"></div>
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+</body>
+</html>

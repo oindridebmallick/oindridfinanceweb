@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Financial Empowerment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-page">
+
+    <header>
+        <h1>👤 My Profile</h1>
+        <button onclick="navigateTo('dashboard.html')">⬅ Back to Dashboard</button>
+    </header>
+
+    <main>
+        <!-- Profile Picture & Name -->
+        <section id="profile-info">
+            <img src="default-profile.png" id="profile-pic" alt="Profile Picture">
+            <input type="file" id="upload-pic" onchange="updateProfilePicture()">
+            <h2 id="user-name">John Doe</h2>
+            <input type="text" id="edit-name" placeholder="Edit name">
+            <button onclick="updateProfile()">Save Changes</button>
+        </section>
+
+        <!-- Account & Financial Info -->
+        <section id="account-info">
+            <h2>🏦 Linked Bank Accounts</h2>
+            <ul id="bank-list">
+                <li>SBI - ****1234 <button onclick="removeBank(1)">Remove Bank</button></li>
+                <li>HDFC - ****5678 <button onclick="removeBank(2)">Remove Bank</button></li>
+            </ul>
+            <button onclick="navigateTo('wallet.html')">➕ Add New Bank</button>
+        </section>
+
+        <section id="financial-overview">
+            <h2>💰 Financial Overview</h2>
+            <p>Wallet Balance: ₹10,500</p>
+            <p>Active Loans: ₹30,000</p>
+            <p>Savings Goal: ₹50,000 (40% completed)</p>
+        </section>
+
+        <!-- Security & Preferences -->
+        <section id="security">
+            <h2>🔐 Security Settings</h2>
+            <button onclick="changePassword()">Change Password</button>
+            <button onclick="enable2FA()">Enable 2FA</button>
+            <button onclick="toggleBiometric()">Enable Biometric Login</button>
+        </section>
+
+        <!-- Preferences -->
+        <section id="preferences">
+            <h2>🎯 Preferences & Notifications</h2>
+            <label><input type="checkbox" checked> Email Notifications</label><br>
+            <label><input type="checkbox" checked> Spending Alerts</label><br>
+            <label><input type="checkbox"> Course Updates</label>
+        </section>
+
+        <!-- Career & Learning Progress -->
+        <section id="career-progress">
+            <h2>🚀 Career & Skill Progress</h2>
+            <p>Enrolled in: <a href="courses.html">"Financial Literacy 101"</a></p>
+            <p>Job Applications: 3 pending</p>
+        </section>
+
+        <!-- Transaction & Loan History -->
+        <section id="history">
+            <h2>📜 Transaction & Loan History</h2>
+            <ul>
+                <li>💳 ₹500 spent on groceries - Feb 20</li>
+                <li>🏦 Loan of ₹10,000 approved - Jan 15</li>
+                <li>🎓 Paid ₹2,000 for a Coursera course - Jan 10</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

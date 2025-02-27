@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wallet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-image: url('images/img14.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button onclick="navigateTo('dashboard.html')">Back to Dashboard</button>
+    </div>
+
+    <div class="content">
+        <h1>My Wallet</h1>
+        
+        <!-- Add Bank Section -->
+        <section id="add-bank">
+            <h2>Add Bank</h2>
+            <ul>
+                <li><a href="https://netbanking.hdfcbank.com/" target="_blank">HDFC Bank</a></li>
+                <li><a href="https://retail.onlinesbi.sbi/" target="_blank">SBI Bank</a></li>
+                <li><a href="https://www.icicibank.com/" target="_blank">ICICI Bank</a></li>
+            </ul>
+        </section>
+
+        <!-- Transaction History -->
+        <section id="transaction-history">
+            <h2>Transaction History</h2>
+            <ul>
+                <li>💰 <b>Deposit:</b> ₹5000 on 20 Feb 2025</li>
+                <li>🛙️ <b>Shopping:</b> -₹1200 on 18 Feb 2025</li>
+                <li>🍔 <b>Food:</b> -₹500 on 15 Feb 2025</li>
+            </ul>
+        </section>
+
+        <!-- Spending Insights -->
+        <section id="spending-insights">
+            <h2>Spending Insights</h2>
+            <canvas id="spendingChart"></canvas>
+        </section>
+
+        <!-- Savings Goals -->
+        <section id="savings-goals">
+            <h2>Savings Goals</h2>
+            <p>🎯 Goal: Save ₹5000 for a Laptop</p>
+            <progress value="3000" max="5000"></progress>
+            <p>₹3000 saved out of ₹5000</p>
+        </section>
+
+        <!-- Auto-Save Feature -->
+        <section id="auto-save">
+            <h2>Auto-Save Feature</h2>
+            <p>Your transactions are rounded up, and the spare change is saved automatically! 🚀</p>
+        </section>
+
+        <!-- Rewards & Cashback -->
+        <section id="rewards">
+            <h2>Rewards & Cashback</h2>
+            <p>💎 You have earned <b>1200 Reward Points</b> this month!</p>
+        </section>
+
+        <!-- Linked Accounts -->
+        <section id="linked-accounts">
+            <h2>Linked Accounts</h2>
+            <p>🔗 UPI Linked: *********@upi</p>
+            <p>🔗 Bank Account: XXXX-XXXX-1234</p>
+        </section>
+    </div>
+
+    <script>
+        // Spending Insights Chart
+        const ctx = document.getElementById('spendingChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Food', 'Shopping', 'Travel', 'Entertainment'],
+                datasets: [{
+                    data: [500, 1200, 800, 600],
+                    backgroundColor: ['#82b1e1', '#003153', '#a1caf1', '#0056b3']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .stat-box {
+            background: rgba(17, 23, 84, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 20%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .highlight {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #406896;
+        }
+        .quote {
+            margin-top: 20px;
+            font-style: italic;
+            text-align: center;
+            background: rgba(68, 18, 93, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <button onclick="navigateTo('chatbot.html')">Chatbot</button>
+        <button onclick="navigateTo('microloans.html')">Microloans</button>
+        <button onclick="navigateTo('wallet.html')">Digital Wallet</button>
+        <button onclick="navigateTo('courses.html')">Courses</button>
+        <button onclick="navigateTo('community.html')">Community</button>
+        <button onclick="navigateTo('assessment.html')">Assessment</button>
+        <button onclick="navigateTo('jobhub.html')">Job Hub</button>
+        <button onclick="navigateTo('profile.html')">My Profile</button>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Financial Empowerment</h1>
+        <p>Financial empowerment is a key step toward gender inclusivity, ensuring equal access to resources, opportunities, and financial independence.</p>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <span class="highlight">70%</span>
+                <p>Women reinvest their income into their families & communities.</p>
+            </div>
+            <div class="stat-box">
+                <span class="highlight">1.4B</span>
+                <p>People still lack access to financial services, disproportionately affecting women.</p>
+            </div>
+            <div class="stat-box">
+                <span class="highlight">$28T</span>
+                <p>Global GDP could rise by closing the gender gap in financial inclusion.</p>
+            </div>
+        </div>
+
+        <div class="quote">
+            <p>"When women are financially empowered, families, communities, and economies thrive." 🌍✨</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
