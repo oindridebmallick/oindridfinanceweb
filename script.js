@@ -40,6 +40,7 @@ function sendMessage() {
 // Basic chatbot responses
 function getBotResponse(input) {
     let responses = {
+        "Is online money safe?" : "Yes, but don’t share your PIN with anyone."
         "hello": "Hi! How can I help you today?",
         "what is a loan?": "A loan is a sum of money borrowed that must be repaid with interest.",
         "how to save money?": "Create a budget, track expenses, and cut unnecessary costs.",
