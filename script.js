@@ -40,7 +40,7 @@ function sendMessage() {
 // Basic chatbot responses
 function getBotResponse(input) {
     let responses = {
-        "Is online money safe?" : "Yes, but don’t share your PIN with anyone."
+        "Is online money safe?" : "Yes, but don’t share your PIN with anyone.",
         "hello": "Hi! How can I help you today?",
         "what is a loan?": "A loan is a sum of money borrowed that must be repaid with interest.",
         "how to save money?": "Create a budget, track expenses, and cut unnecessary costs.",
@@ -56,9 +56,7 @@ function getBotResponse(input) {
         "What happens if I can’t pay my loan?" : "Talk to the lender and ask for more time.",
         "How can I earn money from home?" : "Selling handmade items, tailoring, or cooking.",
         "Where can I find work?" : "Local markets, factories, or women’s training centers.",
-        "I don’t know how to read. Can I still get a job?" : "Yes, skills like sewing, farming, and cooking don’t need reading.",
-        "Is online money safe?" : "Yes, but don’t share your PIN with anyone."
-
+        "I don’t know how to read. Can I still get a job?" : "Yes, skills like sewing, farming, and cooking don’t need reading."
     };
 
     return responses[input.toLowerCase()] || "Sorry, I don't understand that.";
